@@ -36,3 +36,14 @@
     transform: rotate(360deg);
   }
 }
+
+h3 {
+  margin: 0.5rem 0.5rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid #194ea3;
+  border-radius: 45%;
+  background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet);;
+  width: 100px;
+  text-align: center;
+  color: rgb(241, 6, 222);
+}

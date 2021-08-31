@@ -5,15 +5,15 @@ function App() {
 
   const [inputNumber, setInputNumber] = useState(0);
   const [answer, setAnswer] = useState(0);
-  const [lunch, setLunch] = useState('Nearly')
+  const [homeTime, setHomeTime] = useState('Nearly')
 
-  useEffect(() => {
+  // useEffect(() => {
 
-  }, [lunch]);
+  // }, [homeTime]);
 
   useEffect(() => {
     if (inputNumber === 0) {
-      setAnswer('')
+      setAnswer('Nope')
     }
       else if (inputNumber % 3 === 0 && inputNumber % 5 === 0) {
       setAnswer("fizzbuzz")
@@ -22,7 +22,7 @@ function App() {
     } else if (inputNumber % 5 === 0) {
       setAnswer("buzz")
     } else {
-      setAnswer("");
+      setAnswer("Nope");
     }
   }, [inputNumber])
 
@@ -33,22 +33,21 @@ function App() {
   };
 
   const handleSec = () => {
-    if (lunch === 'Go now') {
-      setLunch("Nearly");
+    if (homeTime === 'Go now') {
+      setHomeTime("Nearly");
     }
     else {
-      setLunch('Go now');
+      setHomeTime('Go now');
     }
   }
-
 
   return (
     <>
       <button onClick={handleInc}> + </button>
-      <button onClick={handleSec}> Lunch</button>
+      <button onClick={handleSec}>Break</button>
       <h2>Number is {inputNumber}</h2>
       <h3>{answer}</h3>
-      <h3>{lunch}</h3>
+      <h4>Home time: {homeTime}</h4>
     </>
   );
 }
